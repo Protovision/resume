@@ -40,7 +40,7 @@ article.resume a:hover { text-decoration: underline; }
 article.resume figure {
 	margin: 0;
 	padding: 4pt;
-	background-color: LightGray;
+	background-color: rgba(0,0,0,0.18);
 	font-weight: bold;
 }
 article.resume p { margin: 4pt; padding: 0; }
