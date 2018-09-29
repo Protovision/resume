@@ -14,7 +14,7 @@ article.resume {
 	height: 11in;
 	font-family: var(--resume-font-family);
 	font-size: 12pt;
-	line-height: 1.5;
+	line-height: 1.25;
 	color: Black;
 	background-color: White;
 }
@@ -31,6 +31,7 @@ article.resume h4 { font-size: 16pt; }
 article.resume h5 { font-size: 14pt; }
 article.resume h6 { font-size: 10pt; }
 article.resume hr { margin: 4pt 0 4pt 0; padding: 0; border-top: thin solid Black; }
+article.resume ul { list-style-type: circle; margin: 4pt 0 4pt 24pt; padding: 0; }
 article.resume a,a:link,a:visited,a:hover,a:active {
 	font-family: var(--resume-link-font-family);
 	color: Black;
