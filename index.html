@@ -21,10 +21,6 @@
 					background-repeat: repeat;
 				}
 			}
-			@media print {
-				body { background-image: none; }
-				article.resume { background-image: none; }
-			}
 			#download-resume {
 				display: inline-block;
 				margin: 0 0 0.5em 0;
@@ -37,6 +33,12 @@
 				text-align: center;
 			}
 			#download-resume:hover { text-decoration: underline; }
+			@media print {
+				body { background-image: none; }
+				article.resume { background-image: none; }
+				#download-resume { display: none; }
+			}
+
 		</style>
 	</head>
 	<body>
