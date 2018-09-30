@@ -25,6 +25,18 @@
 				body { background-image: none; }
 				article.resume { background-image: none; }
 			}
+			#download-resume {
+				display: inline-block;
+				margin: 0 0 0.5em 0;
+				padding: 0.25em;
+				border: thin solid SteelBlue;
+				color: Black;
+				background-color: LightGray;
+				font-family: 'PT Serif Caption', 'Garamond', 'Times New Roman', serif;
+				font-size: 12pt;
+				text-align: center;
+			}
+			#download-resume:hover { text-decoration: underline; }
 		</style>
 	</head>
 	<body>
@@ -77,5 +89,6 @@
 				</figure>
 			</article>
 		</main>
+		<div style="text-align: center;"><a id="download-resume" href="resume.pdf" download>Download Resume</a></div>
 	</body>
 </html>
