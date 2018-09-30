@@ -2,6 +2,9 @@
 	--resume-font-family: 'PT Serif', 'Garamond', 'Times New Roman', serif;
 	--resume-heading-font-family: 'PT Serif Caption', 'Garamond', 'Times New Roman', serif;
 	--resume-link-font-family: 'PT Mono', 'Courier New', monospace;
+	--resume-font-color: rgba(0,0,0,0.72);
+	--resume-link-color: rgba(0,0,0,0.72);
+	--resume-figure-background-color: rgba(0,0,0,0.18);
 }
 body {
 	margin: 0;
@@ -15,7 +18,7 @@ article.resume {
 	font-family: var(--resume-font-family);
 	font-size: 12pt;
 	line-height: 1.25;
-	color: Black;
+	color: var(--resume-font-color);
 	background-color: White;
 }
 article.resume h1,h2,h3,h4,h5,h6 {
@@ -34,14 +37,14 @@ article.resume hr { margin: 4pt 0 4pt 0; padding: 0; border-top: thin solid Blac
 article.resume ul { list-style-type: circle; margin: 4pt 0 4pt 24pt; padding: 0; }
 article.resume a,a:link,a:visited,a:hover,a:active {
 	font-family: var(--resume-link-font-family);
-	color: Black;
+	color: var(--resume-link-color);
 	text-decoration: none;
 }
 article.resume a:hover { text-decoration: underline; }
 article.resume figure {
 	margin: 0;
 	padding: 4pt;
-	background-color: rgba(0,0,0,0.18);
+	background-color: var(--resume-figure-background-color);
 	font-weight: bold;
 }
 article.resume p { margin: 4pt; padding: 0; }
@@ -65,7 +68,10 @@ article.resume p { margin: 4pt; padding: 0; }
 		box-shadow: none;
 		width: auto;
 		height: auto;
+		color: Black;
+		background-color: White;
 	}
+	article.resume a,a:link,a:visited,a:hover,a:active { color: Black; }
 	article.resume+article.resume { page-break-before: always; }
 }
 @page { margin: 0; }
