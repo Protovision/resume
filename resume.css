@@ -1,79 +1,90 @@
 :root {
-	--resume-font-family: 'PT Serif', 'Garamond', 'Times New Roman', serif;
-	--resume-heading-font-family: 'PT Serif Caption', 'Garamond', 'Times New Roman', serif;
-	--resume-link-font-family: 'PT Mono', 'Courier New', monospace;
-	--resume-screen-text-color: rgba(0,0,0,0.72);
-	--resume-screen-shade-color: rgba(0,0,0,0.18);
-	--resume-print-text-color: Black;
-	--resume-print-shade-color: LightGray;
+	--resume-text-font-family: 'PT Serif', 'Garamond', 'Times New Roman', 'Times', serif;
+	--resume-heading-font-family: 'PT Serif Caption', 'Garamond', 'Times New Roman', 'Times', serif;
+	--resume-link-font-family: 'PT Mono', 'Courier New', 'Courier', monospace;
+	--resume-background-texture: url('black_denim.png');
+	--resume-paper-texture: url('egg_shell.png');
 }
-body {
-	margin: 0;
-	padding: 0;
-}
-article.resume {
-	padding: 0.5in;
-	box-sizing: border-box;
-	width: 8.5in;
-	height: 11in;
-	font-family: var(--resume-font-family);
+main {
+	font-family: var(--resume-text-font-family);
 	font-size: 12pt;
 	line-height: 1.25;
-	color: var(--resume-screen-text-color);
-	background-color: White;
 }
-article.resume h1,h2,h3,h4,h5,h6 {
+main h1,h2,h3,h4,h5,h6 {
 	margin: 4pt 0 4pt 0;
 	padding: 0;
 	font-family: var(--resume-heading-font-family);
 	font-weight: normal;
 }
-article.resume h1 { font-size: 36pt; }
-article.resume h2 { font-size: 24pt; }
-article.resume h3 { font-size: 18pt; }
-article.resume h4 { font-size: 16pt; }
-article.resume h5 { font-size: 14pt; }
-article.resume h6 { font-size: 10pt; }
-article.resume hr { margin: 4pt 0 4pt 0; padding: 0; border-top: thin solid; }
-article.resume ul { list-style-type: circle; margin: 4pt 0 4pt 24pt; padding: 0; }
-article.resume a,a:link,a:visited,a:hover,a:active {
+main h1 { font-size: 36pt; }
+main h2 { font-size: 24pt; }
+main h3 { font-size: 20pt; }
+main h4 { font-size: 16pt; }
+main h5 { font-size: 10pt; }
+main h6 { font-size: 8pt; }
+b { font-weight: bold; }
+a {
 	font-family: var(--resume-link-font-family);
-	color: var(--resume-screen-text-color);
 	text-decoration: none;
 }
-article.resume a:hover { text-decoration: underline; }
-article.resume figure {
+a:hover,a:active { text-decoration: underline; }
+main figure {
 	margin: 0;
 	padding: 4pt;
-	background-color: var(--resume-screen-shade-color);
+	color: inherit;
+	background-color: rgba(0,0,0,0.18);
 	font-weight: bold;
 }
-article.resume p { margin: 4pt; padding: 0; }
+main p { margin: 4pt 0 4pt 0; padding: 0; }
+#download-resume {
+	display: inline-block;
+	margin: 0 0 1em 0;
+	padding: 0.5em;
+	color: Black;
+	background-color: White;
+	border: medium solid SteelBlue;
+	font-family: sans-serif;
+	font-size: 1em;
+	text-align: center;
+}
 @media screen {
 	body {
-		color: Black;
+		color: rgba(0,0,0,0.72);
 		background-color: Gray;
+		background-image: var(--resume-background-texture);
+		background-repeat: repeat;
 	}
-	article.resume {
+	main>article,main>section {
+		box-sizing: border-box;
 		margin: 1em auto 1em auto;
+		padding: 0.5in;
+		width: 8.5in;
+		height: 11in;
+		background-color: White;
+		background-image: var(--resume-paper-texture);
+		background-repeat: repeat;
 		box-shadow: 5px 5px 20px Black;
 	}
+	main a { color: rgba(0,0,0,0.72); }
 }
 @media print {
 	body {
 		color: Black;
-		background-color: White;
+		background-color: transparent;
+		background-image: none;
 	}
-	article.resume {
+	main>article,main>section {
 		margin: 0;
-		box-shadow: none;
+		padding: 0.5in;			
 		width: auto;
 		height: auto;
-		color: var(--resume-print-text-color);
-		background-color: White;
+		color: Black;
+		background-color: transparent;
+		box-shadow: none;
 	}
-	article.resume a,a:link,a:visited,a:hover,a:active { color: var(--resume-print-text-color); }
-	article.resume figure { background-color: var(--resume-print-shade-color); }
-	article.resume+article.resume { page-break-before: always; }
+	main a { color: Black; }
+	main>article+main>article { page-break-before: always; }
+	main>section+main>section { page-break-before: always; }
+	#download-resume { display: none; }
+	@page { margin: 0; }
 }
-@page { margin: 0; }
