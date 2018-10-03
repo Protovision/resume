@@ -7,21 +7,21 @@
 }
 main {
 	font-family: var(--resume-text-font-family);
-	font-size: 12pt;
+	font-size: 1em;
 	line-height: 1.25;
 }
 main h1,h2,h3,h4,h5,h6 {
-	margin: 4pt 0 4pt 0;
+	margin: 0.33em 0 0.33em 0;
 	padding: 0;
 	font-family: var(--resume-heading-font-family);
 	font-weight: normal;
 }
-main h1 { font-size: 36pt; }
-main h2 { font-size: 24pt; }
-main h3 { font-size: 20pt; }
-main h4 { font-size: 16pt; }
-main h5 { font-size: 10pt; }
-main h6 { font-size: 8pt; }
+main h1 { font-size: 3em; }
+main h2 { font-size: 2em; }
+main h3 { font-size: 1.5em; }
+main h4 { font-size: 1.25em; }
+main h5 { font-size: 0.75em; }
+main h6 { font-size: 0.5em; }
 b { font-weight: bold; }
 a {
 	font-family: var(--resume-link-font-family);
@@ -30,12 +30,12 @@ a {
 a:hover,a:active { text-decoration: underline; }
 main figure {
 	margin: 0;
-	padding: 4pt;
+	padding: 0.33em;
 	color: inherit;
 	background-color: rgba(0,0,0,0.18);
 	font-weight: bold;
 }
-main p { margin: 4pt 0 4pt 0; padding: 0; }
+main p { margin: 0.33em 0 0.33em 0; padding: 0; }
 #download-resume {
 	display: inline-block;
 	margin: 0 0 1em 0;
@@ -47,44 +47,51 @@ main p { margin: 4pt 0 4pt 0; padding: 0; }
 	font-size: 1em;
 	text-align: center;
 }
-@media screen {
-	body {
-		color: rgba(0,0,0,0.72);
-		background-color: Gray;
-		background-image: var(--resume-background-texture);
-		background-repeat: repeat;
-	}
+body {
+	color: rgba(0,0,0,0.72);
+	background-color: Gray;
+	background-image: var(--resume-background-texture);
+	background-repeat: repeat;
+}
+main>article,main>section {
+	box-sizing: border-box;
+	margin: 1em auto 1em auto;
+	padding: 1.5em;
+	width: 90%;
+	background-color: White;
+	background-image: var(--resume-paper-texture);
+	background-repeat: repeat;
+	box-shadow: 5px 5px 20px Black;
+}
+main a { color: rgba(0,0,0,0.72); }
+@media screen and (min-width: 8.5in) {
+	main { font-size: 12pt; }
 	main>article,main>section {
-		box-sizing: border-box;
-		margin: 1em auto 1em auto;
 		padding: 0.5in;
 		width: 8.5in;
 		height: 11in;
-		background-color: White;
-		background-image: var(--resume-paper-texture);
-		background-repeat: repeat;
-		box-shadow: 5px 5px 20px Black;
 	}
-	main a { color: rgba(0,0,0,0.72); }
 }
 @media print {
 	body {
-		color: Black;
-		background-color: transparent;
-		background-image: none;
+		color: Black; !important;
+		background-color: transparent; !important;
+		background-image: none; !important;
 	}
+	main { font-size: 12pt; }
 	main>article,main>section {
-		margin: 0;
-		padding: 0.5in;			
-		width: auto;
-		height: auto;
-		color: Black;
-		background-color: transparent;
-		box-shadow: none;
+		margin: 0; !important;
+		padding: 0.5in; !important;	
+		width: auto; !important;
+		height: auto; !important;
+		color: Black; !important;
+		background-color: transparent; !important;
+		box-shadow: none; !important;
 	}
-	main a { color: Black; }
-	main>article+main>article { page-break-before: always; }
-	main>section+main>section { page-break-before: always; }
-	#download-resume { display: none; }
-	@page { margin: 0; }
+	main a { color: Black; !important; }
+	main figure { background-color: LightGray; !important }
+	main>article+main>article { page-break-before: always; !important }
+	main>section+main>section { page-break-before: always; !important }
+	#download-resume { display: none; !important }
+	@page { margin: 0; !important }
 }
