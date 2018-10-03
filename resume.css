@@ -89,8 +89,13 @@ main a { color: rgba(0,0,0,0.72); }
 		background-color: transparent; !important;
 		box-shadow: none; !important;
 	}
+	b { font-weight: normal; !important; }
 	main a { color: Black; !important; }
-	main figure { background-color: LightGray; !important }
+	main figure {
+		border: thin solid Black; !important;
+		font-weight: normal; !important;
+		background-color: transparent; !important
+	}
 	main>article+main>article { page-break-before: always; !important }
 	main>section+main>section { page-break-before: always; !important }
 	#download-resume { display: none; !important }
