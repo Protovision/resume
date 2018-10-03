@@ -75,8 +75,8 @@ main a { color: rgba(0,0,0,0.72); }
 @media print {
 	body {
 		color: Black; !important;
-		background-color: transparent; !important;
 		background-image: none; !important;
+		background-color: transparent; !important;
 	}
 	main { font-size: 12pt; }
 	main>article,main>section {
@@ -85,6 +85,7 @@ main a { color: rgba(0,0,0,0.72); }
 		width: auto; !important;
 		height: auto; !important;
 		color: Black; !important;
+		background-image: none; !important;
 		background-color: transparent; !important;
 		box-shadow: none; !important;
 	}
