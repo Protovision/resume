@@ -1,0 +1,108 @@
+:root {
+	--main-font: 'Fira Sans Condensed', sans-serif;
+	--heading-font: 'Fira Sans Condensed', sans-serif;
+	--link-font: 'Fira Mono', monospace;
+	--foreground-color: #222;
+	--shaded-color: #bdbdbd;
+	--background-color: #dfdfdf;
+	--link-color: #0022df;
+	/*
+	 * 12pt = 1em
+	 * 72pt = 1in
+	 * 1in = 6em
+	 */
+	--one-inch: 6em;
+}
+body {
+	padding: calc(var(--one-inch) / 4) calc(var(--one-inch) / 8);
+	color: #fff;
+	background-color: #444;
+}
+a {
+	color: var(--link-color);
+	font-family: var(--link-font);
+	text-decoration: none;
+}
+a:hover,a:focus {
+	text-decoration: underline;
+}
+::selection {
+	color: var(--background-color);
+	background-color: var(--link-color);
+}
+body>main {
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: calc(var(--one-inch) / 2);
+	max-width: calc(8.5 * var(--one-inch));
+	min-height: calc(11 * var(--one-inch));
+	color: var(--foreground-color);
+	background-color: var(--background-color);
+	font-size: large;
+	font-family: var(--main-font);
+	line-height: 1.0;
+	box-shadow: 8px 8px 12px #000;
+}
+body>main p {
+	margin: calc(var(--one-inch) / 12) 0;
+	line-height: 1.5;
+}
+body>main h1,
+body>main h2,
+body>main h3,
+body>main h4,
+body>main h5,
+body>main h6 {
+	font-size: inherit;
+	font-family: var(--heading-font);	
+}
+body>main>h1 {
+	margin: calc(var(--one-inch) / 16) 0;
+	font-size: 2em;
+	text-align: center;
+}
+body>main>h1+p {
+	text-align: center;
+}
+body>main>h2 {
+	margin: calc(var(--one-inch) / 16) 0;
+	border-bottom: medium solid;
+	font-size: 1.25em;
+}
+body>main>ul {
+	padding: 0;
+	list-style-type: none;
+}
+body>main>ul>li>p:first-child {
+	border: thin solid;
+	padding: calc(var(--one-inch) / 16);
+	background-color: #bdbdbd;
+}
+@media print {
+	@page {
+		margin: 0.5in;
+	}
+	body {
+		margin: 0;
+		padding: 0;
+		color: #000;
+		background-color: transparent;
+	}
+	a {
+		color: #000;
+	}
+	body>main {
+		margin: 0;
+		padding: 0;
+		color: #000;
+		background-color: transparent;
+		font-size: 12pt;
+		box-shadow: none;
+	}
+	body>main>h2 {
+		page-break-inside: avoid;
+	}
+	body>main>ul>li {
+		page-break-inside: avoid;
+	}
+}
