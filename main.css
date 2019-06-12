@@ -14,7 +14,6 @@
 	--one-inch: 6em;
 }
 body {
-	padding: calc(var(--one-inch) / 4) calc(var(--one-inch) / 8);
 	color: #fff;
 	background-color: #444;
 }
@@ -33,7 +32,7 @@ a:hover,a:focus {
 body>main {
 	box-sizing: border-box;
 	margin: 0 auto;
-	padding: calc(var(--one-inch) / 2);
+	padding: 1em;
 	max-width: calc(8.5 * var(--one-inch));
 	min-height: calc(11 * var(--one-inch));
 	color: var(--foreground-color);
@@ -41,6 +40,7 @@ body>main {
 	font-size: large;
 	font-family: var(--main-font);
 	line-height: 1.0;
+	word-wrap: break-word;
 	box-shadow: 8px 8px 12px #000;
 }
 body>main p {
@@ -77,6 +77,14 @@ body>main>ul>li>p:first-child {
 	border: thin solid;
 	padding: calc(var(--one-inch) / 16);
 	background-color: #bdbdbd;
+}
+@media screen and (min-width: 600px) {
+	body {
+		padding: calc(var(--one-inch) / 4) calc(var(--one-inch) / 8);
+	}
+	body>main {
+		padding: calc(var(--one-inch) / 2);
+	}
 }
 @media print {
 	@page {
