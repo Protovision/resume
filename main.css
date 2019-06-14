@@ -2,10 +2,10 @@
 	--main-font: 'Fira Sans Condensed', sans-serif;
 	--heading-font: 'Fira Sans Condensed', sans-serif;
 	--link-font: 'Fira Mono', monospace;
-	--foreground-color: #222;
-	--shaded-color: #bdbdbd;
+	--foreground-color: #1f1f1f;
+	--shaded-color: #bfbfbf;
 	--background-color: #dfdfdf;
-	--link-color: #0022df;
+	--link-color: /*#0022df;*/ #1f5f9f;
 	/*
 	 * 12pt = 1em
 	 * 72pt = 1in
@@ -15,7 +15,7 @@
 }
 body {
 	color: #000;
-	background-color: #666;
+	background-color: var(--shaded-color);
 }
 a {
 	color: var(--link-color);
@@ -32,6 +32,7 @@ a:hover,a:focus {
 body>main {
 	box-sizing: border-box;
 	margin: 0 auto;
+	border: thin solid;
 	padding: calc(var(--one-inch) / 4) calc(var(--one-inch) / 8);
 	max-width: calc(8.5 * var(--one-inch));
 	min-height: calc(11 * var(--one-inch));
@@ -41,7 +42,7 @@ body>main {
 	font-family: var(--main-font);
 	line-height: 1.0;
 	word-wrap: break-word;
-	box-shadow: 8px 8px 12px #000;
+	box-shadow: 8px 8px 12px var(--foreground-color);
 }
 body>main p {
 	margin: calc(var(--one-inch) / 12) 0;
@@ -61,8 +62,10 @@ body>main>h1 {
 	font-size: 2em;
 	text-align: center;
 }
-body>main>h1+p {
+body>main>address {
+	font-style: normal;
 	text-align: center;
+	line-height: 1.5;
 }
 body>main>h2 {
 	border-bottom: medium solid;
@@ -81,7 +84,7 @@ body>main>ul:nth-of-type(2) {
 body>main>ul:nth-of-type(2)>li>p:first-child {
 	border: thin solid;
 	padding: calc(var(--one-inch) / 12);
-	background-color: #bdbdbd;
+	background-color: var(--shaded-color);
 }
 @media screen and (min-width: 600px) {
 	body {

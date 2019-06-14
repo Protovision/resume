@@ -12,18 +12,18 @@ a {
 }
 body>main {
 	margin: 0;
+	border: none;
 	padding: 0;
 	color: #000;
 	background-color: transparent;
 	font-size: 12pt;
 	box-shadow: none;
 }
-body>main>h2 {
-	page-break-inside: avoid;
+body>main>ul:nth-of-type(2)>li>p:first-child {
+	background-color: lightgray;
 }
-body>main>ul>li {
-	page-break-inside: avoid;
-}
+body>main>h2,
+body>main>ul>li,
 body>main>p {
 	page-break-inside: avoid;
 }
