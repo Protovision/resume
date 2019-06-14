@@ -1,0 +1,29 @@
+@page {
+	margin: 0.5in;
+}
+body {
+	margin: 0;
+	padding: 0;
+	color: #000;
+	background-color: transparent;
+}
+a {
+	color: #000;
+}
+body>main {
+	margin: 0;
+	padding: 0;
+	color: #000;
+	background-color: transparent;
+	font-size: 12pt;
+	box-shadow: none;
+}
+body>main>h2 {
+	page-break-inside: avoid;
+}
+body>main>ul>li {
+	page-break-inside: avoid;
+}
+body>main>p {
+	page-break-inside: avoid;
+}
