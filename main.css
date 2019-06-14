@@ -53,11 +53,11 @@ body>main h3,
 body>main h4,
 body>main h5,
 body>main h6 {
+	margin: calc(var(--one-inch) / 12) 0;
 	font-size: inherit;
 	font-family: var(--heading-font);	
 }
 body>main>h1 {
-	margin: calc(var(--one-inch) / 16) 0;
 	font-size: 2em;
 	text-align: center;
 }
@@ -65,17 +65,22 @@ body>main>h1+p {
 	text-align: center;
 }
 body>main>h2 {
-	margin: calc(var(--one-inch) / 16) 0;
 	border-bottom: medium solid;
 	font-size: 1.25em;
 }
 body>main>ul {
+	margin: calc(var(--one-inch) / 12) 0;
+	padding: 0 0 0 calc(var(--one-inch) / 4);
+	line-height: 1.5;
+	list-style-type: square;
+}
+body>main>ul:nth-of-type(2) {
 	padding: 0;
 	list-style-type: none;
 }
-body>main>ul>li>p:first-child {
+body>main>ul:nth-of-type(2)>li>p:first-child {
 	border: thin solid;
-	padding: calc(var(--one-inch) / 16);
+	padding: calc(var(--one-inch) / 12);
 	background-color: #bdbdbd;
 }
 @media screen and (min-width: 600px) {
