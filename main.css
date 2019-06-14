@@ -1,11 +1,14 @@
 :root {
-	--main-font: 'Fira Sans Condensed', sans-serif;
-	--heading-font: 'Fira Sans Condensed', sans-serif;
-	--link-font: 'Fira Mono', monospace;
+	/*
+	 * Fonts I like: News Cycle, EB Garamond, Fira Sans
+	 */
+	--main-font: 'News Cycle', sans-serif;
+	--heading-font: 'News Cycle', sans-serif;
+	--link-font: 'News Cycle', sans-serif;
 	--foreground-color: #1f1f1f;
 	--shaded-color: #bfbfbf;
 	--background-color: #dfdfdf;
-	--link-color: /*#0022df;*/ #1f5f9f;
+	--link-color: #1f5f9f;
 	/*
 	 * 12pt = 1em
 	 * 72pt = 1in
@@ -21,6 +24,8 @@ a {
 	color: var(--link-color);
 	font-family: var(--link-font);
 	text-decoration: none;
+	letter-spacing: 0.1em;
+	word-spacing: 0.2em;
 }
 a:hover,a:focus {
 	text-decoration: underline;
@@ -59,8 +64,10 @@ body>main h6 {
 	font-family: var(--heading-font);	
 }
 body>main>h1 {
-	font-size: 2em;
 	text-align: center;
+	font-size: 2.5em;
+	letter-spacing: 0.05em;
+	word-spacing: 0.25em;
 }
 body>main>address {
 	font-style: normal;
