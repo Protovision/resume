@@ -78,7 +78,7 @@ body>main>h2 {
 	border-bottom: medium solid;
 	font-size: 1.25em;
 }
-body>main>ul {
+body>main ul {
 	margin: calc(var(--one-inch) / 12) 0;
 	padding: 0 0 0 calc(var(--one-inch) / 4);
 	line-height: 1.5;
