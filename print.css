@@ -19,7 +19,8 @@ body>main {
 	font-size: 12pt;
 	box-shadow: none;
 }
-body>main>ul:nth-of-type(2)>li>p:first-child {
+body>main>ul:nth-of-type(2)>li>p:first-child,
+body>main>ul:nth-of-type(3)>li>p:first-child {
 	background-color: lightgray;
 }
 body>main>h2,
